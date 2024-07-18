@@ -1,0 +1,8 @@
+.custom-navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #ffffff; /* Set text color to white or any other color you prefer */
+}
