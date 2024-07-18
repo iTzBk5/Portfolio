@@ -6,7 +6,20 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+			}
+		}
+	</script>
+     <!-- GSAP CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <!-- SplitText CDN -->
+     <script src="js/splittext.js"></script>
+
 </head>
 <body>
 
@@ -33,13 +46,28 @@
         </div>
     </nav>
     
+    <div id="earth-container"></div>
+    
+    <div class="text-lighting">
+        <h2>Hi</h2>
+        <h2 class="im">I'm</h2>
+    </div>
 
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.5.5/build/spline-viewer.js"></script>
-    <spline-viewer loading-anim-type="none" url="https://prod.spline.design/BN5rmWYZYPz3gakd/scene.splinecode"></spline-viewer>
+    <div class="container">
+        <div class="text-wrapper">
+            <p class="p1">Bk Yassine</p>
+            <p class="p2">Frontend</p>
+            <p class="p3">Backend</p>
+            <p class="p4">UI Designer</p>
+        </div>
+    </div>
 
 
+    <script src="js/scripts.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+    
 </body>
 </html>
