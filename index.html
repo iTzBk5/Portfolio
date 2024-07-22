@@ -6,6 +6,11 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
     <script type="importmap">
 		{
@@ -23,7 +28,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent custom-navbar">
+    <nav class="navbar navbar-expand-lg bg-transparent custom-navbar">
         <a class="navbar-brand" href="#">Benkrama</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,11 +52,11 @@
     </nav>
     
     <div id="earth-container"></div>
-    
+    <canvas id="star-canvas"></canvas>
     <div class="text-lighting">
-        <h2>Hi</h2>
+        <h2 class="hi">Hi</h2>
         <h2 class="im">I'm</h2>
-    </div>
+    </div> 
 
     <div class="container">
         <div class="text-wrapper">
@@ -62,6 +67,42 @@
         </div>
     </div>
 
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>high school</h3>
+                        <h7>sdqsadsqdasadssfdsfwxfdghrhjrj ds ez dfds sdfds</h7>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>high school</h3>
+                        <h7>sdqsadsqdasadssfdsfwxfdghrhjrj ds ez dfds sdfds</h7>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>high school</h3>
+                        <h7>sdqsadsqdasadssfdsfwxfdghrhjrj ds ez dfds sdfds</h7>
+                    </div>
+                
+            </div>
+
+        </div>
+    </section>
 
     <script src="js/scripts.js"></script>
     <script src="js/bootstrap.js"></script>

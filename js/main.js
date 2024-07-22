@@ -51,7 +51,7 @@ scene.add(directionalLight);
 
 // Set camera position
 camera.position.z = 1.5;
-camera.position.y = -0.9; // Position camera to show only the bottom half
+camera.position.y = -0.8; // Position camera to show only the bottom half
 
 // Mouse movement interaction
 var mouseX = 0;
@@ -74,7 +74,7 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 // Stars
 var starCount = 400; // Number of stars
-var starGeometry = new THREE.SphereGeometry(0.060, 16, 16); // Small sphere geometry for stars
+var starGeometry = new THREE.SphereGeometry(0.050, 16, 16); // Small sphere geometry for stars
 var starMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, emissive: 0xffffff });
 for (let i = 0; i < starCount; i++) {
     var star = new THREE.Mesh(starGeometry, starMaterial);
@@ -131,3 +131,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }, "<1");
     });
 });
+
