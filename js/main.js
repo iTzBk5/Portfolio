@@ -111,7 +111,7 @@ window.addEventListener('resize', function () {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const titles = gsap.utils.toArray('p');
+    const titles = gsap.utils.toArray('.p1 ,.p2 ,.p3 ,.p4');
     const tl = gsap.timeline({ repeat: -1 });
 
     titles.forEach(title => {
