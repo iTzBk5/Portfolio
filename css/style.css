@@ -947,3 +947,46 @@ span{
     top: 400px;
   }
 }
+
+.rock img{
+  position: absolute;
+  animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+  right: -130px;
+  padding-top: 30vh;
+}
+@keyframes fadeInFromTop{
+  from{
+    opacity: 0%;
+    transform: translateY(-20);
+  }
+  to{
+    opacity: 80%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating{
+  0%{
+    transform: translate(0%,0%) rotate(360deg);
+  }
+  25%{
+    transform: translate(5%,15%) rotate(360deg);
+  }
+  50%{
+    transform: translate(10%,5%) rotate(360deg);
+  }
+  75%{
+    transform: translate(0%,15%) rotate(360deg);
+  }
+  100%{
+    transform: translate(0%,0%) rotate(360deg);
+  }
+}
+.rock2 img{
+  width: 50vh;
+  height: 50vh;
+  position: absolute;
+  animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+  top: 340vh;
+  left: -13vh;
+}
