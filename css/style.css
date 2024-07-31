@@ -918,41 +918,20 @@ span{
   transform: translateY(0);
 }
 
-@media only screen and (max-width: 1080px) {
-  .containerb {
-    position: relative;
-    max-width: 500px;
-    width: 100%;
-    background: #000000;
-    margin-left: 110px;
-    padding: 0px 20px;
-    border-radius: 7px;
-    top: 400px;
-  }
-}
-
-/* Styles for screens smaller than 480px (typically small phones) */
-@media only screen and (max-width: 480px) {
-  .containerb {
-    position: relative;
-    max-width: 500px;
-    width: 100%;
-    background: #000000;
-    margin-left: 110px;
-    padding: 0px 20px;
-    border-radius: 7px;
-    margin-left: 110px;
-    padding: 0px 20px;
-    border-radius: 7px;
-    top: 400px;
-  }
-}
 
 .rock img{
   position: absolute;
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
   right: -130px;
   padding-top: 30vh;
+}
+.rock2 img{
+  width: 50vh;
+  height: 50vh;
+  position: absolute;
+  animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+  left: -13vh;
+  margin-top: 200px;
 }
 @keyframes fadeInFromTop{
   from{
@@ -982,11 +961,123 @@ span{
     transform: translate(0%,0%) rotate(360deg);
   }
 }
+
+
+@media only screen and (max-width: 1600px) {
+  .containerb {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #000000;
+    margin-left: 600px;
+    padding: 0px 20px;
+    border-radius: 7px;
+  }
+  .scener{
+    position: relative;
+    width: 20%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 380px;
+    left: 150px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Styles for screens smaller than 480px (typically small phones) */
+@media only screen and (max-width: 710px) {
+  .containerb {
+    position: relative;
+    max-width: 500px;
+    width: 70%;
+    background: #000000;
+    margin-left:  150px;
+    border-radius: 7px;
+  }
+  .scener{
+    width: 20%;
+    height: 50vh;
+    bottom: 380px;
+    left: 40px;
+    padding-bottom: 100px;
+  }
+  
+.hi{
+  top: -265px;
+  right: 130px;
+}
+
+.im{
+  top: -350px;
+  right: -120px;
+}
+
+.text-wrapper{
+  top: -200px; /* Adjust this value as needed */
+  left: 15px;
+  
+}
+.About_me-content h1{
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+  color: #fff;
+  
+  margin-left: 170px;
+}
+.About_me-img img{
+  position: relative;
+  top: 30rem;
+  width: 20vw;
+  border-radius: 50%;
+  color: #fff;
+    box-shadow: 0 0 3px #03bcf4,
+    0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 30px #03bcf4,
+    0 0 20px #03bcf4;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  left: -340px;
+  
+}
+.card {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 3px #03bcf4,
+    0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 30px #03bcf4,
+    0 0 20px #03bcf4;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 50px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.heading{
+  font-size: 8rem;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 180px;
+}
 .rock2 img{
   width: 50vh;
   height: 50vh;
   position: absolute;
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
-  top: 340vh;
   left: -13vh;
+  margin-top: 80vh;
+}
 }

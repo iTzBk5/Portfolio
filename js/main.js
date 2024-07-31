@@ -72,6 +72,28 @@ function onMouseMove(event) {
 
 document.addEventListener('mousemove', onMouseMove, false);
 
+
+// Touch movement interaction
+function onTouchMove(event) {
+    if (event.touches.length == 1) {
+        var touch = event.touches[0];
+        mouseX = (touch.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(touch.clientY / window.innerHeight) * 2 + 1;
+
+        // Move stars based on touch movement
+        scene.traverse(function (object) {
+            if (object instanceof THREE.Mesh && object !== earth && object !== clouds) {
+                object.position.x = object.initialPosition.x + mouseX * 5;
+                object.position.y = object.initialPosition.y + mouseY * 5;
+            }
+        });
+    }
+}
+
+document.addEventListener('touchmove', onTouchMove, false);
+
+
+
 // Stars
 var starCount = 400; // Number of stars
 var starGeometry = new THREE.SphereGeometry(0.050, 16, 16); // Small sphere geometry for stars
