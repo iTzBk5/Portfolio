@@ -300,6 +300,8 @@ nav a {
   align-items: center;
   justify-content: center;
   gap: 15rem;
+  z-index: 1;
+  position: relative;
 }
 .About_me-content{
   display: flex;
@@ -329,7 +331,6 @@ span{
 }
 .About_me-img{
   border-radius: 50%;
-  
 }
 .About_me-img img{
   position: relative;
@@ -918,11 +919,14 @@ span{
   transform: translateY(0);
 }
 
-
+.rock{
+  position: relative;
+  overflow: hidden;
+}
 .rock img{
   position: absolute;
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
-  right: -130px;
+  padding-left: 175vh;
   padding-top: 30vh;
 }
 .rock2 img{
@@ -989,6 +993,7 @@ span{
 
 /* Styles for screens smaller than 480px (typically small phones) */
 @media only screen and (max-width: 710px) {
+  
   .containerb {
     position: relative;
     max-width: 500px;
@@ -1005,15 +1010,6 @@ span{
     padding-bottom: 100px;
   }
   
-.hi{
-  top: -265px;
-  right: 130px;
-}
-
-.im{
-  top: -350px;
-  right: -120px;
-}
 
 .text-wrapper{
   top: -200px; /* Adjust this value as needed */
@@ -1029,9 +1025,20 @@ span{
   
   margin-left: 170px;
 }
-.About_me-img img{
+.About_me-content{
+  padding-bottom: 150px;
+}
+.About_me-img{
   position: relative;
-  top: 30rem;
+  left: -340px;
+  top: 25rem;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  z-index: 1;
+}
+.About_me-img img{
+  
+  position: relative;
   width: 20vw;
   border-radius: 50%;
   color: #fff;
@@ -1042,7 +1049,6 @@ span{
     0 0 20px #03bcf4;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-  left: -340px;
   
 }
 .card {
@@ -1079,5 +1085,21 @@ span{
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
   left: -13vh;
   margin-top: 80vh;
+}
+.heading{
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 180px;
+}
+.rock{
+  position: relative;
+  overflow: hidden;
+}
+.rock img{
+  position: absolute;
+  animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+  padding-left: 300px;
+  padding-top: 30vh;
 }
 }

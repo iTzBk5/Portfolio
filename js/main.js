@@ -26,6 +26,7 @@ var material = new THREE.MeshPhongMaterial({
 var earth = new THREE.Mesh(geometry, material);
 scene.add(earth);
 
+
 // Clouds material
 var cloudsMaterial = new THREE.MeshLambertMaterial({
     map: cloudsTexture,
