@@ -1058,6 +1058,7 @@ span{
 .About_me .text-animation{
   margin-left: 170px;
   padding-bottom: 60px;
+  text-align: center;
 }
 
 .About_me-content h1{
@@ -1065,7 +1066,7 @@ span{
   font-weight: 700;
   line-height: 1;
   color: #fff;
-  
+  text-align: center;
   margin-left: 220px;
 }
 .About_me-content{
@@ -1079,6 +1080,7 @@ span{
   padding-top: 100px;
   padding-bottom: 50px;
   z-index: 1;
+  
 }
 .About_me-img img{
   
