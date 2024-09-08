@@ -1236,10 +1236,6 @@ span{
   display: none;
 }
 .About_me .btn-group{
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding-left: auto;
   display: none;
 }
 }
