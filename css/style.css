@@ -1240,6 +1240,7 @@ span{
   align-items: center;
   gap: 1.5rem;
   padding-left: auto;
+  display: none;
 }
 }
 
