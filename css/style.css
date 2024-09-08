@@ -1058,6 +1058,7 @@ span{
 .About_me .text-animation{
   padding-bottom: 50px;
   margin-left: 170px;
+  padding-bottom: 150px;
 }
 
 .About_me-content h1{
@@ -1067,10 +1068,13 @@ span{
   line-height: 1;
   color: #fff;
   
-  margin-left: 200px;
+  margin-left: 220px;
 }
 .About_me-content{
   padding-bottom: 150px;
+}
+.text-cont{
+  padding-bottom: 30px;
 }
 .About_me-img{
   position: relative;
