@@ -1228,6 +1228,12 @@ span{
   top: -350px;
   right: -80px;
 }
+.container{
+  display: none;
+}
+.text-lighting{
+  display: none;
+}
 }
 
 
