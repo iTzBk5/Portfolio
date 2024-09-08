@@ -1235,11 +1235,11 @@ span{
 .text-lighting{
   display: none;
 }
-.btn-group{
+.About_me .btn-group{
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: 170px;
+  padding-left: auto;
 }
 }
 
