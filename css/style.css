@@ -1073,7 +1073,7 @@ span{
 .About_me-content{
   padding-bottom: 150px;
 }
-.text-cont{
+.About_me-content .text-cont{
   padding-bottom: 30px;
 }
 .About_me-img{
