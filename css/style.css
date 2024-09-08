@@ -1238,6 +1238,9 @@ span{
 .About_me .btn-group{
   display: none;
 }
+.btn{
+  display: none;
+}
 }
 
 
