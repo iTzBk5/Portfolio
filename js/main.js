@@ -143,13 +143,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .from(splitTitle.chars, {
                 opacity: 0,
                 y: 80,
-                rotationX: -90,
+                transform: 'translateZ(0)',
                 stagger: 0.02
             }, "<")
             .to(splitTitle.chars, {
                 opacity: 0,
                 y: -80,
-                rotationX: -90,
+                transform: 'translateZ(0)',
                 stagger: 0.02
             }, "<1");
     });
