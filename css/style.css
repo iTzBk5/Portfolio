@@ -1,6 +1,10 @@
 *{
   
   scroll-behavior: smooth;
+  
+}
+html{
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -190,6 +194,11 @@ nav a {
   --second-bg-color: #000000;
   --text-color: white;
   --main-color: #00ffee;
+}
+.heading_contact{
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 10px;
 }
 .heading{
   font-size: 8rem;
@@ -997,7 +1006,7 @@ span{
   .containerb {
     position: relative;
     max-width: 500px;
-    width: 70%;
+    width: auto;
     background: #000000;
     margin-left:  150px;
     border-radius: 7px;
@@ -1012,10 +1021,44 @@ span{
   
 
 .text-wrapper{
+  font-size: 4.5rem;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding-top: -10px;
+  line-height: 0;
+  position: relative;
   top: -200px; /* Adjust this value as needed */
   left: 15px;
+  opacity: 100%;
+  color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+
+  &:nth-of-type(5){
+    color: yellow;
+  }
   
 }
+
+
+.About_me{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  z-index: 1;
+  position: relative;
+}
+
+
+.About_me .text-animation{
+  padding-bottom: 50px;
+}
+
 .About_me-content h1{
   font-size: 6rem;
   font-weight: 700;
@@ -1049,12 +1092,11 @@ span{
     0 0 20px #03bcf4;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-  
 }
 .card {
   position: relative;
-  width: 400px;
-  height: 250px;
+  width: auto;
+  height: auto;
   background-color: #f2f2f2;
   border-radius: 10px;
   display: flex;
@@ -1072,11 +1114,31 @@ span{
   display: inline-block;
   margin-top: 20px;
 }
-.heading{
-  font-size: 8rem;
-  text-align: center;
-  margin-top: 10px;
-  padding-bottom: 180px;
+.card img {
+  width: 300px;
+  height: 200px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .rock2 img{
   width: 50vh;
@@ -1092,6 +1154,12 @@ span{
   margin-top: 10px;
   padding-bottom: 180px;
 }
+.heading_contact{
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .rock{
   position: relative;
   overflow: hidden;
@@ -1102,4 +1170,64 @@ span{
   padding-left: 300px;
   padding-top: 30vh;
 }
+
+.contact form {
+  flex-direction: column; /* Stacks the form elements vertically */
+  gap: 1.5rem; /* Reduces the gap between form elements */
+  margin: 2rem auto; /* Adjusts the margin for smaller screens */
 }
+
+.contact form .input-box input,
+.contact form textarea {
+  padding: 1.5rem; /* Reduces padding to fit better on small screens */
+  font-size: 1.6rem; /* Slightly decreases the font size */
+}
+
+.contact h2 {
+  font-size: 2rem; /* Adjusts the font size of the header for better readability */
+  margin-bottom: 2rem; /* Reduces the bottom margin */
+}
+
+.contact form .btn {
+  margin-top: 1rem; /* Reduces the top margin of the button */
+}
+
+
+.hi{
+  position: relative;
+  font-size: 7rem;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  line-height: 0.70em;
+  outline: none;
+  color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+
+  top: -265px;
+  right: 90px;
+}
+
+.im{
+  position: relative;
+  font-size: 7rem;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  line-height: 0.70em;
+  outline: none;
+  animation: animate 5s linear infinite;
+  top: -350px;
+  right: -80px;
+}
+}
+
+
