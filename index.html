@@ -155,32 +155,95 @@
     </div>
 
     <section class="project" id="project">
-    <div class="project" id="project">
-<h2 class="heading">Project</h2>
-    <div class="card scroll-animation">
-        <img src="./img/Screenshot_2024-05-20_141132.png" ></img>
-        <div class="card__content">
-          <p class="card__title">digital archiving web</p>
-          <p class="card__description">This project an archiving site that can archive PDF documents as blogs and give each blog its own personal web page, it can also use search engine to advanced search in a blog by any language, this project also contains an OCR program that can convert a PDF screenshot to a blog , the site has been use a more effective security system to keep recorded information ("https")</p>
+        <h2 class="heading">Project</h2>
+        <p class="read_more">Click in projects to see more detail</p>
+        
+        <div class="card scroll-animation" onclick="showProject('archiving')">
+            <img src="./img/Screenshot_2024-05-20_141132.png" alt="Digital Archiving">
+            <div class="card__content">
+                <p class="card__title">Digital Archiving Web</p>
+                <p class="card__description">This project an archiving site that can archive PDF documents as blogs and give each blog its own personal web page, it can also use search engine to advanced search in a blog by any language, this project also contains an OCR program that can convert a PDF screenshot to a blog, the site has been use a more effective security system to keep recorded information ("https")</p>
+            </div>
         </div>
-      </div>
 
-      <div class="card scroll-animation">
-        <img src="./img/100_montaditos_firenze_cover.jpg" ></img>
-        <div class="card__content">
-          <p class="card__title">COMING SOON...</p>
-          <p class="card__description">...</p>
+        <div class="card scroll-animation" onclick="showProject('ecommerce')">
+            <img src="./e_commerce/Screenshot 2024-11-05 153833.png" alt="E-Commerce">
+            <div class="card__content">
+                <p class="card__title">E-Commerce Web Site</p>
+                <p class="card__description">A comprehensive e-commerce platform with modern features</p>
+            </div>
         </div>
-      </div>
-      <div class="card scroll-animation">
-        <img src="./img/100_montaditos_firenze_cover.jpg" ></img>
-        <div class="card__content">
-          <p class="card__title">COMING SOON...</p>
-          <p class="card__description">...</p>
+
+        <div class="card scroll-animation" onclick="showProject('pizza')">
+            <img src="./MoPizza/Screenshot 2024-11-02 145419.png" alt="MoPizza">
+            <div class="card__content">
+                <p class="card__title">MoPizza Website</p>
+                <p class="card__description">A restaurant website with ordering capabilities</p>
+            </div>
         </div>
-      </div>
-    </div>
-</section>
+
+        <!-- Showcase containers for each project -->
+        <div id="archiving-showcase" class="showcase-container">
+            <h2 class="project-title">Digital Archiving Web</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('archiving')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('archiving')">→</button>
+                    <div class="dots-container" id="archivingDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Advanced document archiving system with OCR capabilities and secure storage.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">OCR</span>
+                        <span class="tech-tag">Djnago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ecommerce-showcase" class="showcase-container">
+            <h2 class="project-title">E-Commerce Platform</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('ecommerce')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('ecommerce')">→</button>
+                    <div class="dots-container" id="ecommerceDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">A full-featured e-commerce solution with shopping cart and secure checkout.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React js</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Payment Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pizza-showcase" class="showcase-container">
+            <h2 class="project-title">MoPizza Website</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('pizza')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('pizza')">→</button>
+                    <div class="dots-container" id="pizzaDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Remake of Restaurant website</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React js</span>
+                        <span class="tech-tag">Three js</span>
+                        <span class="tech-tag">GSAP</span>
+                        <span class="tech-tag">Tailwind css</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <section class="skills scroll-animation" id="skills">
     <div class="skills" id="skills">

@@ -115,3 +115,125 @@ function sendEmail(event) {
            alert('Failed to send email. Please try again later.');
         });
 }
+const projects = {
+    archiving: {
+        media: [
+            { type: "image", url: "./archiv/Screenshot_2024-05-20_141132.png" },
+            { type: "image", url: "./archiv/Screenshot 2024-11-05 160501.png" },
+            { type: "image", url: "./archiv/Screenshot 2024-11-05 160522.png" },
+            { type: "image", url: "./archiv/Screenshot 2024-11-05 160539.png" },
+        ]
+    },
+    ecommerce: {
+        media: [
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-05 153833.png" },
+            { type: "video", url: "./e_commerce/1105.mp4", thumbnail: "./e_commerce/Screenshot 2024-11-05 153833.png" },
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-05 154108.png" },
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-05 154245.png" }
+        ]
+    },
+    pizza: {
+        media: [
+            { type: "image", url: "./MoPizza/Screenshot 2024-11-02 145419.png" },
+            { type: "video", url: "./MoPizza/1102.mp4", thumbnail: "./MoPizza/Screenshot 2024-11-02 145419.png" },
+            { type: "image", url: "./MoPizza/Screenshot 2024-11-02 145626.png" },
+            { type: "image", url: "./MoPizza/Screenshot 2024-11-02 145520.png" }
+        ]
+    }
+};
+
+const currentMedia = {
+    archiving: 0,
+    ecommerce: 0,
+    pizza: 0
+};
+
+function showProject(projectId) {
+    const showcases = document.querySelectorAll('.showcase-container');
+    showcases.forEach(showcase => showcase.classList.remove('active'));
+
+    const projectShowcase = document.getElementById(`${projectId}-showcase`);
+    projectShowcase.classList.add('active');
+
+    createMediaSlides(projectId);
+}
+
+function createMediaSlides(projectId) {
+    const mediaContainer = document.querySelector(`#${projectId}-showcase .media-container`);
+    const project = projects[projectId];
+    
+    mediaContainer.querySelectorAll('.media-slide').forEach(slide => slide.remove());
+
+    project.media.forEach((media, index) => {
+        const slide = document.createElement('div');
+        slide.className = `media-slide ${index === currentMedia[projectId] ? 'active' : ''}`;
+
+        if (media.type === 'video') {
+            const video = document.createElement('video');
+            video.controls = true;
+            video.poster = media.thumbnail;
+            const source = document.createElement('source');
+            source.src = media.url;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            slide.appendChild(video);
+
+            if (index === currentMedia[projectId]) {
+                video.play();
+            }
+        } else {
+            const img = document.createElement('img');
+            img.src = media.url;
+            img.alt = `Project image ${index + 1}`;
+            slide.appendChild(img);
+        }
+
+        mediaContainer.insertBefore(slide, mediaContainer.firstChild);
+    });
+
+    updateDots(projectId);
+}
+
+function updateProjectMedia(projectId) {
+    const showcase = document.getElementById(`${projectId}-showcase`);
+    const slides = showcase.querySelectorAll('.media-slide');
+
+    slides.forEach((slide, index) => {
+        const isActive = index === currentMedia[projectId];
+        slide.classList.toggle('active', isActive);
+
+        const video = slide.querySelector('video');
+        if (video) {
+            isActive ? video.play() : video.pause();
+        }
+    });
+
+    updateDots(projectId);
+}
+
+function prevMedia(projectId) {
+    const mediaCount = projects[projectId].media.length;
+    currentMedia[projectId] = (currentMedia[projectId] - 1 + mediaCount) % mediaCount;
+    updateProjectMedia(projectId);
+}
+
+function nextMedia(projectId) {
+    const mediaCount = projects[projectId].media.length;
+    currentMedia[projectId] = (currentMedia[projectId] + 1) % mediaCount;
+    updateProjectMedia(projectId);
+}
+
+function updateDots(projectId) {
+    const dotsContainer = document.getElementById(`${projectId}Dots`);
+    dotsContainer.innerHTML = "";
+
+    projects[projectId].media.forEach((_, index) => {
+        const dot = document.createElement("span");
+        dot.className = `dot ${index === currentMedia[projectId] ? "active" : ""}`;
+        dot.addEventListener("click", () => {
+            currentMedia[projectId] = index;
+            updateProjectMedia(projectId);
+        });
+        dotsContainer.appendChild(dot);
+    });
+}
