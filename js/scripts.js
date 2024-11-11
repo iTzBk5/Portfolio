@@ -134,10 +134,10 @@ const projects = {
     },
     pizza: {
         media: [
-            { type: "image", url: "./mopizza/Screenshot 2024-11-02 145419.png" },
-            { type: "video", url: "./mopizza/1102.mp4", thumbnail: "./mopizza/Screenshot 2024-11-02 145419.png" },
-            { type: "image", url: "./mopizza/Screenshot 2024-11-02 145626.png" },
-            { type: "image", url: "./mopizza/Screenshot 2024-11-02 145520.png" }
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-02 145419.png" },
+            { type: "video", url: "./e_commerce/1102.mp4", thumbnail: "./e_commerce/Screenshot 2024-11-02 145419.png" },
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-02 145626.png" },
+            { type: "image", url: "./e_commerce/Screenshot 2024-11-02 145520.png" }
         ]
     }
 };
