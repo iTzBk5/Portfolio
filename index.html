@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./img/Black White Elegant Monogram Initial Name Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+			}
+		}
+	</script>
+     <!-- GSAP CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <!-- SplitText CDN -->
+     <script src="js/splittext.js"></script>
+
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "xAkZld6b33ZalJGje",
+        });
+    })();
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-transparent custom-navbar">
+        <a class="navbar-brand" href="#">Benkrama</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About_me">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#project">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">contact me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+    <div id="earth-container"></div>
+    <canvas id="star-canvas"></canvas>
+    <div class="text-lighting">
+        <h2 class="hi">Hi</h2>
+        <h2 class="im">I'm</h2>
+    </div> 
+
+    <div class="container">
+        <div class="text-wrapper">
+            <p class="p1">Bk Yassine</p>
+            <p class="p2">Frontend</p>
+            <p class="p3">Backend</p>
+            <p class="p4">Developer</p>
+        </div>
+    </div>
+</section>
+
+    <section class="About_me" id="About_me">
+        <div class="About_me-content">
+            <h1>About me<span></span></h1>
+            <h3 class="text-animation">I'm a<span></span></h3>
+            <h9 class="text-animation">I am Benkrama Yassine a web programmer full stack (frontend/backend) I can use multiple languages : python,java,html,css,js...</h9>
+            <div class="social-icons text-animation">
+                <a href="https://www.linkedin.com/in/bk-yassine-18851021a/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOJJREFUSEvtlcEJAkEMRd92oh60De3Es+BBsAELEETwrJ1oGR4EtRHRyOwSQ9xhZ1w8aI7Zmf+Snwlb0HIULevjAXrADbh8Am4Ba2AahJfAPBeiAQPgaAQ7wDUHEgN0c62yFm2ASah4Bcxyqpe73pD7YcinXHEPIJ7rKF9SXX4YbDx4BdkOzkApJuIyA4k9IEISkh8BctYWs3u4stDJVIDtSGsKvOomBRAbjYgL5BmpAC0yBraKqq1NBtj9eDe7ZIDtXD+CF2dSLfoDqoXyFs17fT80g9iWNv7+lZ9+4yrrLtwBU35IGZ5qXwQAAAAASUVORK5CYII="/></a>
+                <a href="https://github.com/iTzBk5"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWJJREFUSEu1lYtNxEAMRH2dQCVAJUAlQCVwlQCVQCeQd9pZzf6SzUlZKYqS2B7P+JNTHHxOB8ePGYD7iLiLCO5cv+n6iojv5R334VkDuImI9xR0LQaADwm0sRsBvCyWrzvkA+QjIt5qnx7AU8p8R/xsSlIFSA2ALD/JHG2fl+dHY0OmHOw4BKQOMFZ98Ml1qQE+TXMoY6yACt57dkmxuxUnB6ilcYAtuWgG/HUo+oXFGkA22oqeJJO0ku5SCwfwLAqaEwCYuLxkT4IFABmoeNlgMjhm3QSdgQNcw8D9c/IO4BSvAfgztrlBHKCe3j1dNPR1AAYFFn6ayay+UzMfxNU2VSfgxICxQQHQ9uSdD5tL6rhFg4xWhTakVoDWhgeqh6vJvm5TGUjPLXl6GxeW1C6frXUtec61Y1pwvtKb4CMGQvcfTo+NGJBEsUFnGLiNptsLzPfR+6LRZv7JO7ZFa3o4wD9Ze1gZdO/y+wAAAABJRU5ErkJggg=="/></a>
+                <a href="https://www.instagram.com/bk.yassine5/?hl=fr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWxJREFUSEvFlT1KBEEQhb+Njc01F8UL+HMMQVhNBQVPoN5AUWMVFsy9gHoD8QJqZGBuYKLzpGoYarvHtpdlC5alZ6bqvVd/PWDKNphyfGYGsAAMgQ375YS+2osH4ATwc/t9SsEOcFWROgW/NqAsgJi/VAR3F4HsNqql6NeiAjGXgv/YJrDeOBybk1QIJAkg9lKRMjmK4ZsFFBGdF42Up1XsBZoE+E5E7sqet/cfRuTezl1SDloMIDZfwLYxF4lHYAS8Z2rWpj7WICrwfF4Ce0HdBbDfgEqF2rlrxQAq1p0xXgpBnoEV4KhT4LHU/6VAnXFuLJcDwBOwOimAd8QZcBAAToFDG8rY2sUp8g76BLaANQNRkW+BOVMXm68YQI5j02nRVFhv02KAVEc4iNLly6xvCfYOWs2qiOx7V8Wky05gGszsstMHtetavpobKWgtd6NJiQZI/3FKY0r8HrgpvXAS+67+0czu5HrKwfMHAP9OGcBddWEAAAAASUVORK5CYII="/></a>
+             </div>
+            <div class="btn-group">
+                <a href="#" class="btn">Hire</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+        </div>
+            <div class="About_me-img ">
+                <img src="./img/450520904_1586249845288017_983793006074218575_n.jpg" alt="">
+            </div>
+    </section>
+
+    
+
+    
+    <div class="rock">
+        <img src="./img/pngwing.com.png" alt="">
+    <section class="education " id="education">
+        <h2 class="heading">Education</h2>
+
+        <div class="timeline-items scroll-animation">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>High school</h3>
+                        <h7>After years of studying in high school, I got a baccalaureate degree in science and mathematics and I was interested in computer science.</h7>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>University </h3>
+                        <h7>I entered the university to major in computer science, where I learned many languages, some of which attracted me and I branched out into them.</h7>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Graduation</h3>
+                        <h7>I got my graduation certificate after several projects that I did at the university and I went into freelance work</h7>
+                    </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    
+    </div>
+
+    <div class="rock2">
+        <img src="./img/—Pngtree—asteroid stone space_14554086.png" alt="">
+    </div>
+
+    <section class="project" id="project">
+        <h2 class="heading">Project</h2>
+        <p class="read_more">Click in projects to see more detail</p>
+        
+        <div class="card scroll-animation" onclick="showProject('archiving')">
+            <img src="./img/Screenshot_2024-05-20_141132.png" alt="Digital Archiving">
+            <div class="card__content">
+                <p class="card__title">Digital Archiving Web</p>
+                <p class="card__description">This project an archiving site that can archive PDF documents as blogs and give each blog its own personal web page, it can also use search engine to advanced search in a blog by any language, this project also contains an OCR program that can convert a PDF screenshot to a blog, the site has been use a more effective security system to keep recorded information ("https")</p>
+            </div>
+        </div>
+
+        <div class="card scroll-animation" onclick="showProject('ecommerce')">
+            <img src="./e_commerce/Screenshot 2024-11-05 153833.png" alt="E-Commerce">
+            <div class="card__content">
+                <p class="card__title">E-Commerce Web Site</p>
+                <p class="card__description">A comprehensive e-commerce platform with modern features</p>
+            </div>
+        </div>
+
+        <div class="card scroll-animation" onclick="showProject('pizza')">
+            <img src="./MoPIzza/Screenshot Screenshot 2024-11-02 145419 .png" alt="MoPizza">
+            <div class="card__content">
+                <p class="card__title">MoPizza Website</p>
+                <p class="card__description">A restaurant website with ordering capabilities</p>
+            </div>
+        </div>
+
+        <!-- Showcase containers for each project -->
+        <div id="archiving-showcase" class="showcase-container">
+            <h2 class="project-title">Digital Archiving Web</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('archiving')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('archiving')">→</button>
+                    <div class="dots-container" id="archivingDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Advanced document archiving system with OCR capabilities and secure storage.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">OCR</span>
+                        <span class="tech-tag">Djnago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ecommerce-showcase" class="showcase-container">
+            <h2 class="project-title">E-Commerce Platform</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('ecommerce')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('ecommerce')">→</button>
+                    <div class="dots-container" id="ecommerceDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">A full-featured e-commerce solution with shopping cart and secure checkout.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React js</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Payment Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pizza-showcase" class="showcase-container">
+            <h2 class="project-title">MoPizza Website</h2>
+            <div class="project-card">
+                <div class="media-container">
+                    <button class="nav-button prev-button" onclick="prevMedia('pizza')">←</button>
+                    <button class="nav-button next-button" onclick="nextMedia('pizza')">→</button>
+                    <div class="dots-container" id="pizzaDots"></div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">Remake of Restaurant website</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React js</span>
+                        <span class="tech-tag">Three js</span>
+                        <span class="tech-tag">GSAP</span>
+                        <span class="tech-tag">Tailwind css</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="skills scroll-animation" id="skills">
+    <div class="skills" id="skills">
+        <h2 class="headings">skills</h2>
+    <div class="containerb">
+        <div class="skill-box">
+            <span class="title">HTML</span>
+
+            <div class="skill-bar">
+                <span class="skill-per html">
+                    <span class="tooltip">70%</span>
+                </span>
+            </div>
+        </div>
+        
+       
+        <div class="skill-box">
+            <span class="title">CSS</span>
+
+            <div class="skill-bar">
+                <span class="skill-per css">
+                    <span class="tooltip">70%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">JavaScript</span>
+
+            <div class="skill-bar">
+                <span class="skill-per javascript">
+                    <span class="tooltip">50%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">Python</span>
+
+            <div class="skill-bar">
+                <span class="skill-per python">
+                    <span class="tooltip">80%</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="scener">
+        <div class="rocket">
+            <img src="./img/rocket.png">
+        </div>
+    </div>
+    
+</div>       
+</section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading_contact">Contact <span>Me</span></h2>
+
+        <form action=""; onsubmit="sendEmail(event);">
+            <div class="">
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" id="phone" placeholder="Phone Number" required>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+            </div>
+
+            <div class="input-group-2">
+                <textarea id="mss" name="mss"  cols="30" rows="10" placeholder="Your Message" ></textarea>
+                <input type="submit" value="Send Message" class="btn" onclick="sendMail()">
+            </div>
+        </form>
+    </section>
+
+    
+
+
+    <footer class="footer">
+        <div class="social2">
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOJJREFUSEvtlcEJAkEMRd92oh60De3Es+BBsAELEETwrJ1oGR4EtRHRyOwSQ9xhZ1w8aI7Zmf+Snwlb0HIULevjAXrADbh8Am4Ba2AahJfAPBeiAQPgaAQ7wDUHEgN0c62yFm2ASah4Bcxyqpe73pD7YcinXHEPIJ7rKF9SXX4YbDx4BdkOzkApJuIyA4k9IEISkh8BctYWs3u4stDJVIDtSGsKvOomBRAbjYgL5BmpAC0yBraKqq1NBtj9eDe7ZIDtXD+CF2dSLfoDqoXyFs17fT80g9iWNv7+lZ9+4yrrLtwBU35IGZ5qXwQAAAAASUVORK5CYII="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWJJREFUSEu1lYtNxEAMRH2dQCVAJUAlQCVwlQCVQCeQd9pZzf6SzUlZKYqS2B7P+JNTHHxOB8ePGYD7iLiLCO5cv+n6iojv5R334VkDuImI9xR0LQaADwm0sRsBvCyWrzvkA+QjIt5qnx7AU8p8R/xsSlIFSA2ALD/JHG2fl+dHY0OmHOw4BKQOMFZ98Ml1qQE+TXMoY6yACt57dkmxuxUnB6ilcYAtuWgG/HUo+oXFGkA22oqeJJO0ku5SCwfwLAqaEwCYuLxkT4IFABmoeNlgMjhm3QSdgQNcw8D9c/IO4BSvAfgztrlBHKCe3j1dNPR1AAYFFn6ayay+UzMfxNU2VSfgxICxQQHQ9uSdD5tL6rhFg4xWhTakVoDWhgeqh6vJvm5TGUjPLXl6GxeW1C6frXUtec61Y1pwvtKb4CMGQvcfTo+NGJBEsUFnGLiNptsLzPfR+6LRZv7JO7ZFa3o4wD9Ze1gZdO/y+wAAAABJRU5ErkJggg=="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWxJREFUSEvFlT1KBEEQhb+Njc01F8UL+HMMQVhNBQVPoN5AUWMVFsy9gHoD8QJqZGBuYKLzpGoYarvHtpdlC5alZ6bqvVd/PWDKNphyfGYGsAAMgQ375YS+2osH4ATwc/t9SsEOcFWROgW/NqAsgJi/VAR3F4HsNqql6NeiAjGXgv/YJrDeOBybk1QIJAkg9lKRMjmK4ZsFFBGdF42Up1XsBZoE+E5E7sqet/cfRuTezl1SDloMIDZfwLYxF4lHYAS8Z2rWpj7WICrwfF4Ce0HdBbDfgEqF2rlrxQAq1p0xXgpBnoEV4KhT4LHU/6VAnXFuLJcDwBOwOimAd8QZcBAAToFDG8rY2sUp8g76BLaANQNRkW+BOVMXm68YQI5j02nRVFhv02KAVEc4iNLly6xvCfYOWs2qiOx7V8Wky05gGszsstMHtetavpobKWgtd6NJiQZI/3FKY0r8HrgpvXAS+67+0czu5HrKwfMHAP9OGcBddWEAAAAASUVORK5CYII="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQ5JREFUSEvlldENwjAMRK+bwCTAJMAkwCTAJLAJbAJ6VYyS1EmTj35hCVFI4rPvLu6ghWNYOL/+F2Ar6SRpFSi+SbqE3/vwPC7lFD0kHSW9K9ocJF2ddc4AyHkAXYBPSG4VeTjsKQUgT0n38J10APorOnkOG+NuStXHgDtLXqIIfi1IzoeKjAKPHttP51D0i1wDKozF670mVYCcot7k7E8EbqGoF2SdOzCniC6wqvm7F2AyGbxRgchcFvToiQk9HkX812LFHBiHQc8kSsMOJ3EPWiPxfs2m8Ro6QNUckEuNJfI6MIHpYk6HYuUeQI+DmDdzQ3HE8GyKizbBqrFd40FWm7aJbv/7Rmu17/Iv/S/ZejIZnal+BAAAAABJRU5ErkJggg=="/></a>
+        </div>
+
+        <div class="list">
+            <ul>
+            <li>
+                <a href="#About_me">About me</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#project">Project</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact Me</a>
+            </li>
+            </ul>
+            <p class="copyright">
+                @Bk | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>
